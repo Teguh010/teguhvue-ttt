@@ -1,0 +1,120 @@
+body {
+  font: normal 16px courier, arial;
+  text-align: center;
+  background-color: purple;
+}
+
+.scoreboard {
+  border: 6px solid red;
+  padding: 5px 50px;
+}
+
+.grid-options {
+  padding: 5px 50px;
+  font-size: 1.5em;
+  background: grey;
+  border: 6px solid red;
+  border-radius: 10px;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.tic-tac-toe .scoreboard {
+  margin: auto;
+  background-color: LimeGreen;
+}
+
+.tic-tac-toe .scoreboard .score {
+  text-align: center;
+  font-size: 30px;
+}
+
+.tic-tac-toe .scoreboard .score.X {
+  color: #101539;
+  font-weight: bold;
+}
+
+.tic-tac-toe .scoreboard .score.O {
+  color: #4b5179;
+  font-weight: bold;
+}
+
+.tic-tac-toe .board table {
+  // cell-spacing: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin: 30px auto;
+}
+
+.tic-tac-toe .board td {
+  border: 2px solid #000;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  background-color: #F8A028;
+
+      justify-content: center;
+      align-items: center;
+      border: 6px solid #212750;
+      font-weight: bold;
+      font-size: 6em;
+      transition: all 0.1s;
+
+      &:not(.game__box--x):not(.game__box--o):not(.game__box--over) {
+        cursor: pointer;
+
+        &:hover {
+          background-color: #343a5e;
+        }
+
+        &:active {
+          box-shadow: inset 0 0 50px 5px rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      &--winner {
+        >span {
+          animation: winner 300ms forwards;
+          animation-delay: 100ms;
+        }
+      }
+}
+
+
+.tic-tac-toe .board td.X {
+  color: #101539;
+  
+}
+
+.tic-tac-toe .board td.O {
+  color: #4b5179;
+}
+
+.reset-score {
+  padding: 10px;
+}
+
+.btn-reset {
+  padding: 5px 50px;
+  font-size: 1.5em;
+  background: grey;
+  border: 6px solid red;
+  border-radius: 10px;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+  
+  &:hover {
+    background: #343a5e;
+  }
+}
